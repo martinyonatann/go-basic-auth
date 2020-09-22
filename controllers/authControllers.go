@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"net/http"
 )
-
+//CreateAccount for create account
 var CreateAccount = func(w http.ResponseWriter, r *http.Request) {
 	account := &models.Account{}
 	err := json.NewDecoder(r.Body).Decode(account) //decode the request
@@ -18,6 +18,7 @@ var CreateAccount = func(w http.ResponseWriter, r *http.Request) {
 	u.Respond(w, resp)
 }
 
+//Authenticate for auth login
 var Authenticate = func(w http.ResponseWriter, r *http.Request) {
 	account := &models.Account{}
 	err := json.NewDecoder(r.Body).Decode(account) //decode request body

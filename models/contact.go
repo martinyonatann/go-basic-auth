@@ -7,11 +7,12 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+//Contact for struktur model
 type Contact struct {
 	gorm.Model
 	Name   string `json:"name"`
 	Phone  string `json:"phone"`
-	UserId uint   `json:"user_id"`
+	UserID uint   `json:"user_iD"` 
 }
 
 /*
@@ -26,7 +27,7 @@ func (contact *Contact) Validate() (map[string]interface{}, bool) {
 	if contact.Phone == "" {
 		return u.Message("01", false, "Phone number should be on the payload"), false
 	}
-	if contact.UserId <= 0 {
+	if contact.UserID <= 0 {
 		return u.Message("01", false, "User is not recognized"), false
 	}
 
