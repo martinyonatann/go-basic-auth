@@ -1,6 +1,7 @@
 module api-go-deploy-heroku
 
-go 1.14.2
+GOVERSION = go 1.14.1
+
 
 require (
 	github.com/denisenkom/go-mssqldb v0.0.0-20200910202707-1e08a3fab204 // indirect
